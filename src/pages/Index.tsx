@@ -5,6 +5,7 @@ import { ParticleBackground } from '@/components/ParticleBackground';
 import { TypewriterAnimation } from '@/components/TypewriterAnimation';
 import { PressureTextAnimation } from '@/components/PressureTextAnimation';
 import { SocialLinks } from '@/components/SocialLinks';
+import CurvedLoop from '@/components/CurvedLoop';
 
 const Index = () => {
   const [hasEntered, setHasEntered] = useState(false);
@@ -25,18 +26,21 @@ const Index = () => {
           <div className="mb-8">
             <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 sm:mb-6 text-white glow-text-red font-orbitron leading-tight">
               <TypewriterAnimation 
-                texts={["baddiee", "ney000o"]} 
+                texts={["ney0000o"]} 
                 typeSpeed={150}
                 deleteSpeed={100}
                 pauseTime={2000}
               />
             </h1>
             
-            <div className="text-lg sm:text-xl md:text-2xl text-red-500 mb-6 sm:mb-8 px-2">
-              <PressureTextAnimation 
-                text="gaming since 2014" 
-                className="block glow-text-white font-rajdhani font-semibold mt-2"
-                delay={2000}
+            <div className="mb-6 sm:mb-8 px-2 h-32">
+              <CurvedLoop 
+                marqueeText="gaming since 2014 " 
+                speed={1}
+                className="fill-red-500 glow-text-red font-rajdhani font-semibold text-2xl"
+                curveAmount={200}
+                direction="right"
+                interactive={true}
               />
             </div>
           </div>
