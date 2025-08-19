@@ -5,7 +5,7 @@ import { ParticleBackground } from '@/components/ParticleBackground';
 import { TypewriterAnimation } from '@/components/TypewriterAnimation';
 import { PressureTextAnimation } from '@/components/PressureTextAnimation';
 import { SocialLinks } from '@/components/SocialLinks';
-import CurvedLoop from '@/components/CurvedLoop';
+import TextPressure from '@/components/TextPressure';
 
 const Index = () => {
   const [hasEntered, setHasEntered] = useState(false);
@@ -33,14 +33,14 @@ const Index = () => {
               />
             </h1>
             
-            <div className="mb-6 sm:mb-8 px-2 h-32">
-              <CurvedLoop 
-                marqueeText="gaming since 2014 " 
-                speed={1}
-                className="fill-red-500 glow-text-red font-rajdhani font-semibold text-2xl"
-                curveAmount={200}
-                direction="right"
-                interactive={true}
+            <div className="mb-6 sm:mb-8 px-2 h-16 w-full max-w-md mx-auto">
+              <TextPressure 
+                text="gaming since 2014"
+                textColor="#FF0000"
+                strokeColor="#FFFFFF"
+                stroke={true}
+                minFontSize={16}
+                className="glow-text-red"
               />
             </div>
           </div>
